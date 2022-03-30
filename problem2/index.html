@@ -1,0 +1,80 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fancy Form</title>
+
+  <!-- You may add more stuff here -->
+  <link href="style.css" rel="stylesheet" />
+
+  <!--==================== UNICONS ====================-->
+  <script src="https://kit.fontawesome.com/116ac598ce.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- You may reorganise the whole HTML, as long as your form achieves the same effect. -->
+  <div class="container">
+    <form onsubmit="return !1">
+    
+      <div class="first_page active">
+        <div class='label_container' id="address">
+          <i class="fa-brands fa-ethereum fa-flip" style="--fa-animation-duration: 15s;"></i>
+          <label for="input-address" class="big_font">ETH Address</label>
+          <div class="tooltip">
+            <i class="fa-solid fa-circle-info fa-2xs"></i>
+            <div class="tooltiptext">0x71C7656EC7ab88b098defB751B7401B5f6d8976F<i class="fa-solid fa-clipboard"
+                onclick="clipboard(2)"></i></div>
+          </div>
+          <div class='input_container'>
+            <input id="input-address" class="input_color" placeholder="42-character address"  required 
+              autocomplete="on" />
+          </div>
+          <span id="address_error"></span>
+        </div>
+        
+        <div class='label_container' id="amount">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+          <label for="input-amount" class="big_font">Amount to send</label>
+          <div class='input_container'>
+            <input id="input-amount" class="input_color" placeholder="0.00" type="number" required />
+          </div>
+          <span id="amount-error"></span>
+        </div>
+        
+        
+        <div class='label_container' id="otp">
+          <i class="fa-solid fa-unlock-keyhole"></i>
+          <label for="input-otp" class="big_font">OTP Authentication</label>
+          <div class='input_container'>
+            <input type="number" id="input-otp" class="input_color" placeholder="Six digits: 123456" required />
+            <button id="otp_button">Request OTP</button>
+          </div>
+          <span id="otp_error"></span>
+        </div>
+        
+        <div class="token">
+          <button onclick="validateAddress()" class="button">SEND TOKENS</button>
+        </div>
+      </div>
+      
+      
+      
+      <div class="second_page inactive">
+        <div class="animation">
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_QGHiAw.json" background="transparent" speed="1"
+                  style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+        </div>
+
+        Your transaction has been completed!
+      
+      </div>
+      
+    </form>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>

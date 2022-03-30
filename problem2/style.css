@@ -1,0 +1,202 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Slab:wght@400;500;600&display=swap");
+
+:root {
+  /*========== Font and typography ==========*/
+  --body-font: "Roboto Slab", serif;
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 800;
+
+  /*========== Colors ==========*/
+  /* Change favorite color */
+  --hue-color: 214; /*Prussian Blue hsl(214, 55%, 21%)*/
+  --secondhue-color: 47; /*Cyber yellow hsl(47, 100%, 62%)*/
+
+  /* HSL color mode */
+  --first-color: hsl(var(--hue-color), 55%, 21%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --second-color: hsl(var(--secondhue-color), 100%, 62%);
+  --second-color-lighter: hsl(var(--secondhue-color), 92%, 85%);
+}
+
+body {
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 360px; */
+  background-color: var(--first-color-lighter);
+  font-family: var(--body-font);
+  /* font-family: Arial, Helvetica, sans-serif;
+  margin-top: 100px; */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 600px;
+  padding: 20px;
+  /* background-color: yellow; */
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.label_container:focus-within {
+  background-color: red;
+}
+
+.first_page {
+  background: #fff;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+  padding: 20px;
+  margin-top: 5px;
+}
+
+.second_page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  font-size: var(--big-font-size);
+}
+
+.label_container {
+  font-size: 2rem;
+  padding: 25px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border-radius: 0.5rem;
+}
+
+/* div.label_container:focus-within {
+  background-color: green;
+} */
+
+.input_container {
+  padding-top: 10px;
+}
+
+.input_color {
+  border-width: 3px;
+  border-color: var(--first-color);
+}
+
+input {
+  font-size: 1rem;
+}
+
+#address {
+  background-color: var(--second-color-lighter);
+}
+
+#amount {
+  background-color: var(--second-color-lighter);
+}
+
+#otp {
+  background-color: var(--second-color-lighter);
+}
+.token {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.inactive {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+
+span {
+  font-size: var(--normal-font-size);
+  color: red;
+  font-style: italic;
+  padding-top: 5px;
+}
+
+/* setting font type,size,weight */
+.big_font {
+  font-size: var(--big-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+/* setting button */
+.button {
+  background-color: #fff;
+  color: var(--first-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-color: var(--first-color);
+  border-width: 3px;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+.button:hover {
+  background-color: var(--second-color);
+  font-weight: var(--font-semi-bold);
+}
+
+#otp_button {
+  font-family: var(--body-font);
+  border-color: var(--first-color);
+  border-width: 3px;
+}
+
+.animation {
+  padding-left: 125px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  bottom: -5px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #263f4d;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 20px;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.fa-clipboard:hover {
+  cursor: pointer;
+}
